@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Расширенный поиск</title>
+    <link rel="stylesheet" href="../static/css/main.css">
+</head>
+<body>
+    <main>
+        <div class="menu">
+            <a class="menu_but" href="/">Главная</a>
+            <a class="menu_but" href="/Advanced_Search">Расширенный поиск</a>
+            <a class="menu_but" href="/DZ">Дз ;)</a>
+        </div>
+        <div class="Advanced_Search">
+            <h3>Расширенный поиск</h3>
+            <br>
+            <form>
+                <span>Введите названия фильма</span><br>
+                <input class="search_field" type="text" placeholder="-">
+                <br>
+                <span>Введите названия страны</span><br>
+                <input class="search_field" type="text" placeholder="-">
+                <br>
+                <span>Выберите жанр(ы) фильма</span><br>
+                <input class="search_field" type="text" placeholder="-">
+                <br>
+                <span>Выберите рейтинг фильма</span><br>
+                <select class="search_data">
+                    <option>Любой</option>
+                    <option>G</option>
+                    <option>PG</option>
+                    <option>PG-13</option>
+                    <option>R</option>
+                    <option>NC-17</option>
+                </select>
+                <br>
+                <span>Дата</span><br>
+                <input class="search_data" type="text" placeholder="C"><input class="search_data" type="text" placeholder="ПО">
+                <br>
+                <input style="margin: 0.5%" type="checkbox">Сериал&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- Я в начале думал margin попробовать но он немного не так тут работает, еще думал изспользовть свойство display: block но не стал -->
+                <input style="margin: 0.5%" type="checkbox">Фильм
+                <br>
+                <button class="search_data" type="submit">Поиск</button>
+            </form>
+        </div>
+        <div class="content">
+
+        </div>
+    </main>
+</body>
+</html>
