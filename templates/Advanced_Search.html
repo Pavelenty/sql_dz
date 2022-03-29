@@ -18,12 +18,12 @@
         <div class="Advanced_Search">
             <h3>Расширенный поиск</h3>
             <br>
-            <form>
+            <form method="POST" action="/Advanced_Search">
                 <span>Введите названия фильма</span><br>
-                <input class="search_field" type="text" placeholder="-">
+                <input name="name_film" class="search_field" type="text" placeholder="-">
                 <br>
                 <span>Введите названия страны</span><br>
-                <input class="search_field" type="text" placeholder="-">
+                <input name="country_film" class="search_field" type="text" placeholder="-">
                 <br>
                 <span>Выберите жанр(ы) фильма</span><br>
                 <input class="search_field" type="text" placeholder="-">
@@ -41,7 +41,7 @@
                 <span>Дата</span><br>
                 <input class="search_data" type="text" placeholder="C"><input class="search_data" type="text" placeholder="ПО">
                 <br>
-                <input style="margin: 0.5%" type="checkbox">Сериал&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- Я в начале думал margin попробовать но он немного не так тут работает, еще думал изспользовть свойство display: block но не стал -->
+                <input style="margin: 0.5%" type="checkbox">Сериал&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<!-- Я в начале думал margin попробовать но он немного не так тут работает, еще думал изспользовть свойство display: block но не стал -->
                 <input style="margin: 0.5%" type="checkbox">Фильм
                 <br>
                 <button class="search_data" type="submit">Поиск</button>

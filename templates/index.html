@@ -15,14 +15,20 @@
             <a class="menu_but" href="/Advanced_Search">Расширенный поиск</a>
             <a class="menu_but" href="/DZ">Дз ;)</a>
         </div>
+        {% for key, value in search.items() %}
         <div class="content">
-            <div class="block_film">
-                <img style="margin-right:1%" src="../static/img/film.png">
-                описания фильма<br>
-                описания фильма<br>
-                описания фильма
+            <div class="img_film">
+                <img src="../static/img/film.png"><!--Что бы было по красивей сделал что то типо общего превью, хотя оно совсем некрасивое)-->
+            </div>
+            <div class="text">
+                <b>Название:</b> {{ value.title }}<br>
+                <b>Страна производства:</b> {{ value.country }}<br>
+                <b>Дата выпуска:</b> {{ value.release }}<br>
+                <b>Жанр:</b> {{ value.genre }}<br>
+                <b>Описание:</b> {{ value.description }}
             </div>
         </div>
+        {% endfor %}
     </main>
 </body>
 </html>

@@ -41,14 +41,12 @@ main {
     padding-bottom: 1%;
 }
 .content {
+    display: flex;
     background: #edf9fc;
     margin: 1.5%;
     margin-left: 5%;
     margin-right: 5%;
     padding: 1%;
-}
-.block_film {
-    display: flex;
 }
 span {
     font-size: 80%;
@@ -65,4 +63,7 @@ span {
     margin-top: 0.5%;
     width: 9%;
     min-width: 80px;
+}
+.text {
+    margin-left: 1%;
 }
