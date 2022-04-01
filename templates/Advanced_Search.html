@@ -26,20 +26,24 @@
                 <input name="country_film" class="search_field" type="text" placeholder="-">
                 <br>
                 <span>Выберите жанр(ы) фильма</span><br>
-                <input class="search_field" type="text" placeholder="-">
+                <select class="search_data" name="genre">
+                    {% for genre in genre_list %}
+                    <option value="{{ genre }}">{{ genre }}</option>
+                    {% endfor %}
+                </select>
                 <br>
                 <span>Выберите рейтинг фильма</span><br>
-                <select class="search_data">
+                <select class="search_data" name="rating">
                     <option>Любой</option>
-                    <option>G</option>
-                    <option>PG</option>
-                    <option>PG-13</option>
-                    <option>R</option>
-                    <option>NC-17</option>
+                    <option value="G">G</option>
+                    <option value="PG">PG</option>
+                    <option value="PG-13">PG-13</option>
+                    <option value="R">R</option>
+                    <option value="NC-17">NC-17</option>
                 </select>
                 <br>
                 <span>Дата</span><br>
-                <input class="search_data" type="text" placeholder="C"><input class="search_data" type="text" placeholder="ПО">
+                <input class="search_data" type="text" placeholder="C" name="release_year_one"><input class="search_data" type="text" placeholder="ПО" name="release_year_two">
                 <br>
                 <input style="margin: 0.5%" type="checkbox">Сериал&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<!-- Я в начале думал margin попробовать но он немного не так тут работает, еще думал изспользовть свойство display: block но не стал -->
                 <input style="margin: 0.5%" type="checkbox">Фильм
@@ -47,9 +51,21 @@
                 <button class="search_data" type="submit">Поиск</button>
             </form>
         </div>
+        {% for key, value in search.items() %}
         <div class="content">
-
+            <div class="img_film">
+                <img src="../static/img/film.png">
+            </div>
+            <div class="text">
+                <b>Название:</b> {{ value.title }}<br>
+                <b>Страна производства:</b> {{ value.country }}<br>
+                <b>Дата выпуска:</b> {{ value.release }}<br>
+                <b>Жанр:</b> {{ value.genre }}<br>
+                <b>Рейтинг:</b> {{ value.rating }}<br>
+                <b>Описание:</b> {{ value.description }}
+            </div>
         </div>
+        {% endfor %}
     </main>
 </body>
 </html>
