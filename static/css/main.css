@@ -67,3 +67,11 @@ span {
 .text {
     margin-left: 1%;
 }
+.item_line {
+    color: #fa8f89;
+    font-size: 20px;
+}
+.item_line:hover {
+    color: #8b00ff;
+    font-size: 22px;
+}

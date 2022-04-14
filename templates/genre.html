@@ -32,6 +32,7 @@
                 <button class="search_data" type="submit">Поиск</button>
             </form>
         </div>
+        {% for search in list %}
         {% for key, value in search.items() %}
         <div class="content">
             <div class="img_film">
@@ -39,12 +40,10 @@
             </div>
             <div class="text">
                 <b>Название:</b> {{ value.title }}<br>
-                <b>Страна производства:</b> {{ value.country }}<br>
-                <b>Дата выпуска:</b> {{ value.release }}<br>
-                <b>Жанр:</b> {{ value.genre }}<br>
                 <b>Описание:</b> {{ value.description }}
             </div>
         </div>
+        {% endfor %}
         {% endfor %}
     </main>
 </body>
